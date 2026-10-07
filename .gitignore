@@ -1,0 +1,6 @@
+# Build artifacts
+build/
+*.o
+
+# Binaries (if generated in root or other dirs)
+*.out
