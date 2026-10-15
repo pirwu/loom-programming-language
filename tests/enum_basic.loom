@@ -1,0 +1,31 @@
+module main
+
+import console
+
+enum TokKind {
+    Ident
+    Number
+    Plus
+    Minus = 10
+    Star
+    Eof
+}
+
+enum Color {
+    Red = 100
+    Green
+    Blue
+}
+
+fn main() -> i64 {
+    console.print_int(TokKind.Ident)
+    console.print_int(TokKind.Number)
+    console.print_int(TokKind.Plus)
+    console.print_int(TokKind.Minus)
+    console.print_int(TokKind.Star)
+    console.print_int(TokKind.Eof)
+    console.print_int(Color.Red)
+    console.print_int(Color.Green)
+    console.print_int(Color.Blue)
+    ret 0
+}

@@ -1,0 +1,20 @@
+module main
+
+import console
+
+struct Point {
+    x: i64
+    y: i64
+}
+
+fn main() -> i64 {
+    p: Point
+    p.x = 3
+    p.y = 4
+    pp: ptr<Point> = &p
+    console.print_int(pp.x)
+    console.print_int(pp.y)
+    pp.x = 100
+    console.print_int(p.x)
+    ret 0
+}

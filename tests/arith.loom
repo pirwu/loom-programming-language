@@ -1,0 +1,12 @@
+module main
+
+import console
+
+fn main() -> i64 {
+    x: i64 = 2
+    y: i64 = 3
+    z: i64 = x + y * 4
+    console.print_int(z)
+    console.print("\n")
+    ret 0
+}

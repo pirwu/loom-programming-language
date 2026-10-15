@@ -1,0 +1,13 @@
+module main
+
+import console
+
+extern fn _write(fd: i64, buf: ptr<u8>, n: i64) -> i64
+
+fn main() -> i64 {
+    msg: ptr<u8> = "test\n"
+    _write(1, msg, 5)
+    console.print("via console\n")
+    _write(1, msg, 5)
+    ret 0
+}

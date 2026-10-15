@@ -1,0 +1,11 @@
+module main
+
+import console
+
+fn main() -> i64 {
+    x: i64 = 42
+    p: ptr<i64> = &x
+    y: i64 = *p
+    console.print_int(y)
+    ret 0
+}

@@ -1,0 +1,21 @@
+module main
+
+import console
+
+extern fn strlen(s: ptr<u8>) -> i64
+extern fn _write(fd: i64, buf: ptr<u8>, n: i64) -> i64
+
+fn main() -> i64 {
+    buf: [4]u8
+    buf[0] = 65
+    buf[1] = 66
+    buf[2] = 67
+    buf[3] = 0
+
+    p: ptr<u8> = &buf[0] as ptr<u8>
+    n: i64 = strlen(p)
+    console.print_int(n)
+    _write(1, p, n)
+    console.print("\n")
+    ret 0
+}

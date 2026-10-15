@@ -1,0 +1,23 @@
+module main
+
+import console
+
+enum Op {
+    Add = 1
+    Sub = 2
+    Mul = 3
+}
+
+fn apply(op: i64, a: i64, b: i64) -> i64 {
+    if op == Op.Add { ret a + b }
+    if op == Op.Sub { ret a - b }
+    if op == Op.Mul { ret a * b }
+    ret 0
+}
+
+fn main() -> i64 {
+    console.print_int(apply(Op.Add, 3, 4))
+    console.print_int(apply(Op.Sub, 10, 3))
+    console.print_int(apply(Op.Mul, 6, 7))
+    ret 0
+}

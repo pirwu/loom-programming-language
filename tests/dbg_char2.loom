@@ -1,0 +1,10 @@
+module main
+
+import console
+
+fn main() -> i64 {
+    c: i64 = 65
+    console.print_int(c)
+    console.print("\n")
+    ret 0
+}

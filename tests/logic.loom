@@ -1,0 +1,15 @@
+module main
+
+import console
+
+fn main() -> i64 {
+    a: i64 = 1
+    b: i64 = 0
+    console.print_int(a && b)
+    console.print_int(a && a)
+    console.print_int(b && a)
+    console.print_int(a || b)
+    console.print_int(b || b)
+    console.print_int(b || a)
+    ret 0
+}

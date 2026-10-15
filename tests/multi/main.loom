@@ -1,0 +1,11 @@
+module main
+
+import console
+import lexer
+
+fn main() -> i64 {
+    s: ptr<u8> = "a1b2c3d4e5"
+    n: i64 = 10
+    console.print_int(lexer.count_digits(s, n))
+    ret 0
+}

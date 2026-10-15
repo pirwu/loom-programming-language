@@ -1,0 +1,14 @@
+module main
+
+import console
+
+extern fn _write(fd: i64, buf: ptr<u8>, n: i64) -> i64
+extern fn strlen(s: ptr<u8>) -> i64
+
+fn main() -> i64 {
+    msg: ptr<u8> = "hello from extern\n"
+    n: i64 = strlen(msg)
+    _write(1, msg, n)
+    console.print_int(sizeof(i64))
+    ret 0
+}

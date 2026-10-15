@@ -1,0 +1,16 @@
+module lexer
+
+import console
+
+export fn count_digits(s: ptr<u8>, n: i64) -> i64 {
+    i: i64 = 0
+    c: i64 = 0
+    while i < n {
+        b: i64 = s[i] as i64
+        if b >= 48 && b <= 57 {
+            c = c + 1
+        }
+        i = i + 1
+    }
+    ret c
+}

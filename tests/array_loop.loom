@@ -1,0 +1,18 @@
+module main
+
+import console
+
+fn main() -> i64 {
+    buf: [5]i64
+    i: i64 = 0
+    while i < 5 {
+        buf[i] = i * 2
+        i = i + 1
+    }
+    i = 0
+    while i < 5 {
+        console.print_int(buf[i])
+        i = i + 1
+    }
+    ret 0
+}

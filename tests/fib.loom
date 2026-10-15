@@ -1,0 +1,21 @@
+module main
+
+import console
+
+fn fib(n: i64) -> i64 {
+    if n < 2 {
+        ret n
+    }
+    a: i64 = fib(n - 1)
+    b: i64 = fib(n - 2)
+    ret a + b
+}
+
+fn main() -> i64 {
+    i: i64 = 0
+    while i < 10 {
+        console.print_int(fib(i))
+        i = i + 1
+    }
+    ret 0
+}

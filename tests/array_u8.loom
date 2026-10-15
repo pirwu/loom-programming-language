@@ -1,0 +1,13 @@
+module main
+
+import console
+
+fn main() -> i64 {
+    buf: [4]u8
+    buf[0] = 65      // 'A'
+    buf[1] = 66      // 'B'
+    buf[2] = 67      // 'C'
+    buf[3] = 0       // NUL
+    console.print(&buf[0] as ptr<u8>)
+    ret 0
+}

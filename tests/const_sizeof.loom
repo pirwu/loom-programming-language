@@ -1,0 +1,15 @@
+module main
+
+import console
+
+struct Point {
+    x: i64
+    y: i64
+}
+
+const POINT_SIZE: u64 = sizeof(Point)
+
+fn main() -> i64 {
+    console.print_int(POINT_SIZE)
+    ret 0
+}

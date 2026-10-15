@@ -1,0 +1,16 @@
+module main
+
+import console
+
+fn main() -> i64 {
+    buf: [4]u8
+    buf[0] = 65
+    buf[1] = 66
+    buf[2] = 67
+    buf[3] = 0
+
+    p: ptr<u8> = &buf[0] as ptr<u8>
+    console.print_int(*p)          // ожидаем 65
+    console.print_int(*(p + 1))    // ожидаем 66 Ч но `p + 1` требует арифметику указателей
+    ret 0
+}

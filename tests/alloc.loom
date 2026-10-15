@@ -1,0 +1,11 @@
+module main
+
+import console
+
+fn main() -> i64 {
+    p: ptr<i64> = alloc(8) as ptr<i64>
+    *p = 42
+    console.print_int(*p)
+    free(p)
+    ret 0
+}

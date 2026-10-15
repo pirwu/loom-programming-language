@@ -1,0 +1,18 @@
+module main
+
+import console
+
+let counter: i64 = 0
+
+fn inc() -> void {
+    counter = counter + 1
+    ret
+}
+
+fn main() -> i64 {
+    inc()
+    inc()
+    inc()
+    console.print_int(counter)
+    ret 0
+}

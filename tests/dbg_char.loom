@@ -1,0 +1,13 @@
+module main
+
+import console
+
+fn main() -> i64 {
+    console.print_int(65)
+    console.print("\n")
+    console.print_char(65)
+    console.print("\n")
+    console.print_char(66)
+    console.print("\n")
+    ret 0
+}

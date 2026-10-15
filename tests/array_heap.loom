@@ -1,0 +1,22 @@
+module main
+
+import console
+
+fn main() -> i64 {
+    n: i64 = 10
+    arr: ptr<i64> = alloc(n * sizeof(i64)) as ptr<i64>
+    i: i64 = 0
+    while i < n {
+        arr[i] = i * i
+        i = i + 1
+    }
+    sum: i64 = 0
+    i = 0
+    while i < n {
+        sum = sum + arr[i]
+        i = i + 1
+    }
+    console.print_int(sum)
+    free(arr)
+    ret 0
+}

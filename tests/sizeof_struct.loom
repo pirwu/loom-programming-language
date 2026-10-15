@@ -1,0 +1,39 @@
+module main
+
+import console
+
+struct Point {
+    x: i64
+    y: i64
+}
+
+struct Mixed {
+    a: u8
+    b: u32
+    c: u8
+}
+
+struct Packed {
+    a: u8
+    b: u8
+    c: u8
+    d: u8
+}
+
+struct Tok {
+    kind: u32
+    start: u64
+    len: u64
+}
+
+fn main() -> i64 {
+    console.print_int(sizeof(Point))
+    console.print_int(sizeof(Mixed))
+    console.print_int(sizeof(Packed))
+    console.print_int(sizeof(Tok))
+    console.print_int(sizeof(ptr<Point>))
+    console.print_int(sizeof(i64))
+    console.print_int(sizeof(u8))
+    console.print_int(sizeof(u32))
+    ret 0
+}

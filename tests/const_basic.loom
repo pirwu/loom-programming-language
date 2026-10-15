@@ -1,0 +1,20 @@
+module main
+
+import console
+
+const MAX: i64 = 100
+const MIN: i64 = 0
+const STEP: i64 = 5
+const TWO: i64 = 1 + 1
+const NEG: i64 = 0 - 42
+const MASK: u64 = 0xFF
+
+fn main() -> i64 {
+    console.print_int(MAX)
+    console.print_int(MIN)
+    console.print_int(STEP * 2)
+    console.print_int(TWO)
+    console.print_int(NEG)
+    console.print_int(MASK & 0x0F)
+    ret 0
+}
